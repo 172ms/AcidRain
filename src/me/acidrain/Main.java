@@ -16,7 +16,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
 		String version = getServer().getClass().getPackage().getName().split("\\.")[3];
 		
 		if (version.compareTo("v1_16_R1") >= 0 && version.compareTo("v1_19_R4") <= 0) {
-			getServer().getConsoleSender().sendMessage("§e[!] §aYOUR VERSIONt " + Bukkit.getVersion() + " YOU WILL USE NETHERITE_HELMET");
+			getServer().getConsoleSender().sendMessage("§e[!] §aYOUR VERSION " + Bukkit.getVersion() + " YOU WILL USE NETHERITE_HELMET");
 		}
 		else {
 			getServer().getConsoleSender().sendMessage("§e[!] §aYOUR VERSION " + Bukkit.getVersion() + " YOU WILL USE DIAMOND_HELMET");
