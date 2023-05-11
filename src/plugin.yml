@@ -1,0 +1,9 @@
+name: AcidRain
+main: me.acidrain.Main
+version: 1.0
+author: fakeduck_king
+api-version: 1.13
+
+commands:
+  acidrain:
+    usage: /mycommand <argument>
