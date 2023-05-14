@@ -32,8 +32,6 @@ public class Main extends JavaPlugin implements CommandExecutor {
 			saveResource("config.yml", false);
 		}
 		
-		loadConfig();
-		
 		acidRainManager = new AcidRainManager(getServer().getWorld("world"), this);
 		acidRainManager.runTaskTimer(this, 0L, 20L); //1 SEC
 	}
@@ -70,8 +68,6 @@ public class Main extends JavaPlugin implements CommandExecutor {
 		switch (reload) {
 			case "reload": {
 				reloadConfig();
-				loadConfig();
-				
 				sender.sendMessage("§e[!] §aThe configuration of the §cAcidRain §aplugin has been reloaded.");
 				return true;
 			}
@@ -118,15 +114,6 @@ public class Main extends JavaPlugin implements CommandExecutor {
 				sender.sendMessage("§c/acidrain change [true/false] - §fchange acid rain state");
 				return true;
 			}
-		}
-	}
-	
-	private void loadConfig() {
-		if (!getConfig().contains("acidrain")) {
-			getConfig().addDefault("acidrain", true);
-			getConfig().options().copyDefaults(true);
-			getConfig().options().copyHeader(true);
-			saveConfig();
 		}
 	}
 }
